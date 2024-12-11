@@ -17,6 +17,7 @@ from tensorboardX import SummaryWriter
 from tqdm import tqdm, trange
 from scipy.special import softmax
 import pathlib
+import nltk
 
 from pytorch_transformers import (WEIGHTS_NAME, BertConfig,
                                   BertForSequenceClassification, BertForMultipleChoice,
@@ -654,4 +655,5 @@ def main():
 
 
 if __name__ == "__main__":
+    nltk.download('punkt')
     main()
