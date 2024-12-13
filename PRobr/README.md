@@ -10,6 +10,7 @@ This repository is tested on Python 3.8.3.
 You should install PRobr on a virtual environment. All dependencies can be installed as follows:
 ```
 pip install -r requirements.txt
+pip install protobuf==3.19.0
 ```
 
 ## Download Dataset
