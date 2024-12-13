@@ -4,7 +4,7 @@ ep=50
 output_dir=./output/d5
 # model=roberta_rr # PRover
 model=roberta_probr  # PRobr
-num_gpus=8
+num_gpus=1
 distribute_on=" -m torch.distributed.launch --nproc_per_node=$num_gpus"
 distribute_off=""
 distribute=$distribute_off
@@ -13,7 +13,7 @@ python3 $distribute ./run_experiment_probr.py                        \
     --data_dir $data_dir                                             \
     --output_dir $output_dir                                         \
     --per_gpu_eval_batch_size 32                                      \
-    --per_gpu_train_batch_size 8                                    \
+    --per_gpu_train_batch_size 4                                    \
     --model_type $model                                   \
     --model_name_or_path roberta-large                               \
     --task_name rr                                                   \
